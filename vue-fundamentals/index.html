@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue skul</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="container mx-auto my-12">
+    <div class="plans">
+      <plan-picker></plan-picker>
+    </div>
+  </div>
+
+  <script type="text/x-template" id="plan-picker-template">
+    <div>
+      <plan v-for="plan in plans" :name="plan"></plan>
+    </div>
+  </script>
+    
+  <script type="text/x-template" id="plan-template">
+    <div class="shadow rounded p-2 w-64 my-2 cursor-pointer hover:bg-gray-300 transition-300">
+      <div class="description">
+        <span>{{ name }}</span>
+      </div>
+    </div>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
