@@ -15,12 +15,13 @@
 
   <script type="text/x-template" id="plan-picker-template">
     <div>
-      <plan v-for="plan in plans" :name="plan"></plan>
+      <plan v-for="plan in plans" :name="plan" @select="onPickPlan" :selected-plan="selectedPlan"></plan>
     </div>
   </script>
     
   <script type="text/x-template" id="plan-template">
-    <div class="shadow rounded p-2 w-64 my-2 cursor-pointer hover:bg-gray-300 transition-300">
+    <div @click="picking" :class="{'line-through': isSelected }"
+    class="shadow rounded p-2 w-64 my-2 cursor-pointer hover:bg-gray-300 transition-300">
       <div class="description">
         <span>{{ name }}</span>
       </div>

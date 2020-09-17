@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue slots</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="container mx-auto my-12">
+    <todo-item>
+      hello world!
+      <template #description>hi there</template>
+    </todo-item>
+  </div>
+
+  <script type="text/x-template" id="todo-item-template">
+    <div class="flex items-center">
+      <input type="checkbox" @click="toggle">
+      <span class="ml-2" :class="{'line-through': completed}">
+          <slot></slot>
+      </span>
+      <slot name="description"></slot>
+    </div>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
