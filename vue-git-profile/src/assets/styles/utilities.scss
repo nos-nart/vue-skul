@@ -1,0 +1,317 @@
+/*!---------------margin + padding ---------------*/
+$spacings: (
+  '0': 0,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '10': 2.5rem,
+  '12': 3rem,
+  '16': 4rem,
+  '20': 5rem,
+  '24': 6rem,
+  '32': 8rem,
+  '40': 10rem,
+  '48': 12rem,
+  '56': 14rem,
+  '64': 16rem,
+);
+
+@each $name, $spacing in $spacings {
+  .m-#{$name} {
+    margin: $spacing;
+  }
+
+  .mx-#{$name} {
+    margin-left: $spacing;
+    margin-right: $spacing;
+  }
+
+  .my-#{$name} {
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+  }
+
+  .mr-#{$name} {
+    margin-right: $spacing;
+  }
+
+  .ml-#{$name} {
+    margin-left: $spacing;
+  }
+
+  .mt-#{$name} {
+    margin-top: $spacing;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $spacing;
+  }
+
+  .p-#{$name} {
+    padding: $spacing;
+  }
+
+  .px-#{$name} {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
+
+  .py-#{$name} {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
+
+  .pr-#{$name} {
+    padding-right: $spacing;
+  }
+
+  .pl-#{$name} {
+    padding-left: $spacing;
+  }
+
+  .pt-#{$name} {
+    padding-top: $spacing;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: $spacing;
+  }
+}
+
+/*!---------------display---------------*/
+$displays: (
+  'block': block,
+  'hidden': hidden,
+  'inline-block': inline-block,
+  'inline': inline,
+  'inline-flex': inline-flex,
+  'table': table,
+  'grid': grid,
+);
+
+@each $name, $display in $displays {
+  .#{$name} {
+    display: $display;
+  }
+}
+
+/*!---------------font-size---------------*/
+$fontSizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem,
+  '3xl': 1.875rem,
+  '4xl': 2.25rem,
+  '5xl': 3rem,
+  '6xl': 4rem,
+);
+
+@each $name, $size in $fontSizes {
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+
+/*!---------------width---------------*/
+$widths: (
+  '0': 0,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '10': 2.5rem,
+  '12': 3rem,
+  '16': 4rem,
+  '20': 5rem,
+  '24': 6rem,
+  '32': 8rem,
+  '40': 10rem,
+  '48': 12rem,
+  '56': 14rem,
+  '64': 16rem,
+  'auto': auto,
+  'full': 100%,
+  'screen': 100v,
+);
+
+@each $name, $width in $widths {
+  .w-#{$name} {
+    width: $width;
+  }
+}
+
+/*!---------------flex main axis---------------*/
+$heights: (
+  '0': 0,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '10': 2.5rem,
+  '12': 3rem,
+  '16': 4rem,
+  '20': 5rem,
+  '24': 6rem,
+  '32': 8rem,
+  '40': 10rem,
+  '48': 12rem,
+  '56': 14rem,
+  '64': 16rem,
+  'auto': aut,
+  'px': 1p,
+  'full': 100,
+  'screen': 100vh,
+);
+
+@each $name, $height in $heights {
+  .h-#{$name} {
+    height: $height;
+  }
+}
+
+
+/*!---------------flex main axis---------------*/
+$flexMainAxis: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'between': space-between,
+  'around': space-around,
+  'evenly': space-evenly,
+);
+
+@each $name, $justify in $flexMainAxis {
+  .justify-#{$name} {
+    justify-content: $justify;
+  }
+}
+
+/*!---------------flex cross axis---------------*/
+$flexCrossAxis: (
+  'stretch': stretch,
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+  'baseline': baseline,
+);
+
+@each $name, $align in $flexCrossAxis {
+  .items-#{$name} {
+    align-content: $align;
+  }
+}
+
+/*!---------------positions ---------------*/
+$positions: (
+  'static': static,
+  'fixed': fixed,
+  'absolute': absolute,
+  'relative': relative,
+  'sticky': sticky,
+);
+
+@each $name, $position in $positions {
+  .#{$name} {
+    position: $position;
+  }
+}
+
+/*!---------------text color ---------------*/
+$colors: (
+  'transparent': transparent,
+  'black': #000,
+  'white': #fff,
+  'green-500': #48bb78,
+  'green-600': #38a169,
+  'indigo-500': #667eea,
+  'indigo-600': #5a67d8,
+  'red-500': #f56565,
+  'red-600': #e53e3e,
+  'gray-300': #e2e8f0,
+  'gray-400': #cbd5e0,
+  'gray-500': #a0aec0,
+  'gray-600': #718096,
+  'gray-700': #4a5568,
+  'gray-800': #2d3748,
+  'gray-900': #1a202c,
+);
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+}
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background: $color !important;
+  }
+}
+
+/*!---------------text transform ---------------*/
+$textTransforms: (
+  'uppercase': uppercase,
+  'lowercase': lowercase,
+  'capitalize': capitalize,
+  'normal-case': none,
+  );
+
+@each $name, $transform in $textTransforms {
+  .text-#{$name} {
+    text-transform: $transform !important;
+  }
+}
+
+/*!---------------line height ---------------*/
+$lineHeights: (
+  'none': 1,
+  'tight': 1.25,
+  'snug': 1.375,
+  'normal': 1.5,
+  'relaxed': 1.625,
+  'loose': 2,
+  '3': .75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '7': 1.75rem,
+  '8': 2rem,
+  '9': 2.25rem,
+  '10': 2.5rem,
+);
+
+@each $name, $lh in $lineHeights {
+  .leading-#{$name} {
+    line-height: $lh;
+  }
+}
+
+/*!---------------Cursor ---------------*/
+$cursors: (
+  'auto': auto,
+  'default': default,
+  'pointer': pointer,
+  'wait': wait,
+  'text': text,
+  'move': move,
+  'not-allowed': not-allowed,
+);
+
+@each $name, $cursor in $cursors {
+  .cursor-#{$name} {
+    cursor: $cursor;
+  }
+}

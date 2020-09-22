@@ -1,7 +1,8 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
 import HeyUI from 'heyui'
-// import router from 'vue-router'
+import router from './shared/router'
+import './assets/styles/index.scss'
 
 require('heyui/themes/index.less')
 
@@ -16,5 +17,6 @@ Vue.mixin({
 });
 
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
