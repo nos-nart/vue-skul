@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <Button color="primary">Main color</Button>
+    content goes from here!!
   </div>
 </template>
 
